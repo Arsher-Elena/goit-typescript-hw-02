@@ -4,18 +4,15 @@
 */
 
 enum WeekDays {
-  mon = "weekday",
-  tue = "weekday",
-  wed = "weekday",
-  thu = "weekday",
-  fri = "weekday",
-  sat = "weekend",
-  sun = "weekend",
+  mon = 'monday',
+  tue = 'tuesday',
+  wed = 'wednesday',
+  thu = 'thursday',
+  fri = 'friday',
+  sat = 'saturday',
+  sun = 'sunday',
 }
 
-function isWeekend(day: WeekDays): boolean {
-  if (day === 'weekday') {
-    return false;
-  }
-  return true;
-};
+function isWeekend (day: WeekDays): boolean {
+return day === WeekDays.sat || day === WeekDays.sun;
+}
